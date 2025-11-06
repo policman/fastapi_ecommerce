@@ -1,6 +1,6 @@
 from decimal import Decimal
 
-from sqlalchemy import Boolean, ForeignKey, Integer, Numeric, String
+from sqlalchemy import Boolean, ForeignKey, Integer, Numeric, String, text
 from sqlalchemy.orm import Mapped as M, mapped_column as mc, relationship
 
 from app.database import Base
@@ -26,7 +26,7 @@ class Product(Base):
                                    nullable=True,
                                    index=True)  # не по тз
 
-    count_review: M[int] = mc(Integer, default=0)  # не по тз
+    count_review: M[int] = mc(Integer, default=0, nullable=False)  # не по тз
 
     seller: M["User"] = relationship(back_populates="products")
     category: M["Category"] = relationship(back_populates="products")

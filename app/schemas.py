@@ -68,8 +68,11 @@ class Product(BaseModel):
     stock: int = Field(description="Количество товара на складе")
     category_id: int = Field(description="ID категории")
     is_active: bool = Field(description="Активность товара")
-    rating: Decimal = Field(description="Рейтинг продукта 1-5", ge=1, le=5, decimal_places=1)
-    count_review: int | None = Field(description="Количество отзывов", ge=0)
+    rating: Decimal | None = Field(None,
+                                   description="Рейтинг продукта 1-5",
+                                   ge=0, le=5,
+                                   decimal_places=1)
+    count_review: int = Field(description="Количество отзывов", ge=0)
 
     model_config = ConfigDict(from_attributes=True)
 
