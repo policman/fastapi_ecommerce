@@ -1,4 +1,28 @@
-/app/migrations/
-alembic.ini
-ecommerce.db
+# Environment
 .env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Dependencies
+node_modules/
+vendor/
+
+.idea
+__pycache__
