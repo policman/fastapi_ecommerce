@@ -1,1 +1,4 @@
 /app/migrations/
+alembic.ini
+ecommerce.db
+.env
