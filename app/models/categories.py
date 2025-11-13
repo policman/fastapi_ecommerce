@@ -4,7 +4,6 @@ from sqlalchemy.orm import Mapped as M, mapped_column as mc, relationship
 
 from app.database import Base
 
-
 class Category(Base):
     __tablename__ = "categories"
 
