@@ -2,7 +2,8 @@
 .env
 .env.*
 !.env.example
-
+.venv
+.env
 # Logs
 *.log
 npm-debug.log*
@@ -24,5 +25,9 @@ Thumbs.db
 node_modules/
 vendor/
 
+# IDE
 .idea
-__pycache__
+
+# Python cache
+__pycache__/
+*.py[cod]
