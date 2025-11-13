@@ -1,7 +1,7 @@
 
 from sqlalchemy import Boolean, ForeignKey, String
 from sqlalchemy.orm import Mapped as M, mapped_column as mc, relationship
-
+#ggg
 from app.database import Base
 
 class Category(Base):
